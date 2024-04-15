@@ -1,0 +1,19 @@
+<%-include("partials/header.ejs")%>
+<form action="/submit" method="POST">
+  <input
+    type="text"
+    name="title"
+    class="feedback-input"
+    placeholder="TITLE"
+    required
+  />
+  <textarea
+    name="blog"
+    class="feedback-input"
+    placeholder="Craft your own blog in this space...."
+    required
+  ></textarea
+  ><br />
+  <input type="submit" value="submit" class="s" />
+</form>
+<%-include("partials/footer.ejs")%>

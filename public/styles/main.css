@@ -1,0 +1,155 @@
+.logo {
+  border-radius: 50%;
+}
+.fs-4 {
+  font-family: Merriweather;
+}
+
+body {
+  display: grid;
+  min-height: 100vh;
+}
+
+main {
+  padding: 5vmin;
+  flex: 1 0 auto;
+}
+
+.slider {
+  height: 300px;
+  width: 90%;
+  position: relative;
+  margin: 0px;
+  display: grid;
+  place-items: center;
+}
+
+.slide-track {
+  display: flex;
+  width: calc(300px * 7);
+  animation: scroll 55s linear infinite;
+}
+
+.slide-track1 {
+  display: flex;
+  width: calc(300px * 7);
+  animation: scroll2 55s linear infinite;
+}
+@keyframes scroll2 {
+  0% {
+    transform: translateX(calc(-300px * 3));
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.slide {
+  height: 200px;
+  width: 300px;
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  perspective: 100px;
+}
+
+img:hover {
+  transform: translateZ(20px);
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-300px * 3));
+  }
+}
+
+.slider::before {
+  top: 0;
+  left: 0;
+}
+.slider::after {
+  top: 0;
+  right: 0;
+  transform: rotateZ(180deg);
+}
+
+form {
+  margin-top: 50px;
+}
+
+.feedback-input {
+  color: white;
+  font-weight: 500;
+  font-size: 18px;
+  border-radius: 5px;
+  line-height: 22px;
+  background-color: transparent;
+  border: 2px solid #a0148b;
+  transition: all 0.3s;
+  padding: 13px;
+  margin-bottom: 15px;
+  width: 100%;
+  box-sizing: border-box;
+  outline: 0;
+}
+
+.feedback-input:focus {
+  border: 2px solid #a0148b;
+}
+
+textarea {
+  height: 300px;
+  line-height: 150%;
+  resize: vertical;
+}
+
+.s {
+  width: 100%;
+  background: #a0148b;
+  border-radius: 5px;
+  border: 0;
+  cursor: pointer;
+  color: white;
+  font-size: 24px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  transition: all 0.3s;
+  margin-top: -4px;
+  font-weight: 700;
+}
+[type='submit']:hover {
+  background: #3586ff;
+}
+
+.feedback-i {
+  color: white;
+  font-weight: 500;
+  font-size: 18px;
+  border-radius: 5px;
+  line-height: 22px;
+  background-color: transparent;
+  border: 2px solid #a0148b;
+  transition: all 0.3s;
+  padding-top: 10px;
+  margin-bottom: 15px;
+  width: 50%;
+  box-sizing: border-box;
+  outline: 0;
+}
+.ss {
+  width: 50%;
+  background: #a0148b;
+  border-radius: 5px;
+  border: 0;
+  cursor: pointer;
+  color: white;
+  font-size: 24px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  transition: all 0.3s;
+  margin-top: -4px;
+  font-weight: 700;
+}

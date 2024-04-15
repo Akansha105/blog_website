@@ -1,0 +1,12 @@
+<%-include("partials/header.ejs")%>
+<div>
+  <%if(locals.posts) {%> <%posts.forEach((post)=>{%>
+  <div class="post-c">
+    <h2><%= post.name%></h2>
+    <p><em><%=post.text%></em></p>
+  </div>
+  <%})}else{%>
+  <h3>NO POST YET</h3>
+  <%}%>
+</div>
+<%-include("partials/footer.ejs")%>
